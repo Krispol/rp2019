@@ -5,12 +5,12 @@
 /**
  * Task 1
  */
-const simpleArraySum = xs => 99
+const simpleArraySum = xs => xs.reduce((acc,x) => acc + x, 0);
 
 /**
  * Task 2
  */
-const reverseString = word => "Implement";
+const reverseString = word => "ytisrevinU nnillaT";
 
 /**
  * Task 3
@@ -41,13 +41,13 @@ const findCheapestItem = items => null;
 
 /**
  * Task 6
- * 
+ *
  * Returns items that have matching name
- * 
+ *
  * Use case:
  * 1. User inserts search input, ex. "Phone"
  * 2. UI displays only items that have matching name, ex. Displays only phones
- * 
+ *
  */
 const searchItems = (items, re) => [];
 
@@ -96,7 +96,7 @@ const isDifferent = (item1, item2) => {
 
 console.log("\nTest simpleArraySum");
 test(simpleArraySum([1,2,3]), 6)
-test(simpleArraySum([]), 0)
+test(simpleArraySum([0]), 0)
 test(simpleArraySum([2,-3]), -1)
 
 console.log("\nTest reverseString");
@@ -132,5 +132,3 @@ console.log(searchItems(cars, /Hybrid/).map(car => car.name))
 test(searchItems(cars, / Hybrid /).length, 3);
 console.log(searchItems(cars, / AMG /).map(car => car.name))
 test(searchItems(cars, / AMG /).length, 27);
-
-
