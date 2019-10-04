@@ -1,7 +1,7 @@
 
 body{
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-	color: #7c8586;
+	color: #6e6e6e;
 	line-height: 20px;
 	font-size: 14px;
 }
@@ -52,31 +52,42 @@ a {
 	text-decoration: none;
 }
 
-.store-item {
+.store_item {
 	margin: 5px 5px;
 	box-shadow: 0px 2px 6px 0px #959999;
 	border-radius: 2px;
 }
 
-.store-item img {
+.store_item img {
 	width: 300px;
 	height: 300px;
 }
 
-.store-item:hover {
+.store_item:hover {
 	cursor: pointer;
 	box-shadow: 0px 2px 6px 0px rgb(187, 14, 8);
 	transition: .5s all;
 }
 
-.item-info {
+.item_info {
 	padding: 5px 5px 5px 10px;
 }
 
-.item-title {
+.item_title {
 	font-size: 18px;
 }
 
-.item-price {
-	font-size: 14px;
+.item_price {
+	font-size: 18px;
+	color: rgb(187, 14, 8);
+}
+
+.itemContainer {
+	box-shadow: 0px 2px 6px 0px rgb(230, 230, 230);
+	width: 90%;
+	padding: 40px 20px;
+}
+
+.itemContainer .item_image {
+	width: 200px;
 }

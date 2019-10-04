@@ -2,21 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pastakapood</title>
-    <script>
-        //alert("Hello World!");
-        const x = window.location;
-        console.log(x);
-        const params = new URLSearchParams(window.location.search)
-        const title = params.get("title");
-        const cost = params.get("cost");
-        const src = params.get("src");
-        console.log(title, cost, src);
-        alert(`title: ${title} cost: ${cost} src: ${src}`)
-    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./item.js"></script>
 </head>
 <body>
     <div class="header">
@@ -32,8 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="content">
-        Olen pastakas
+    <div class="content" id="item-body">
     </div>
 </body>
 </html>
