@@ -7,7 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pastakapood</title>
     <script>
-        alert("Hello World!");
+        //alert("Hello World!");
+        const x = window.location;
+        console.log(x);
+        const params = new URLSearchParams(window.location.search)
+        const title = params.get("title");
+        const cost = params.get("cost");
+        const src = params.get("src");
+        console.log(title, cost, src);
+        alert(`title: ${title} cost: ${cost} src: ${src}`)
     </script>
 </head>
 <body>
