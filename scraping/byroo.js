@@ -33,4 +33,5 @@
     });
 
     console.log(JSON.stringify(arr));
+    // või console.log(arr);
 }
