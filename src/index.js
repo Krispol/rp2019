@@ -1,15 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const root = document.getElementById( elementid= "app");
-
-console.log("root", root);
+const node = document.getElementById("app");
 
 ReactDOM.render(
   React.createElement(
-    type= "button",
-    props= {},
-    children= "I am a button, Hello World"
+    "button",
+    {},
+    "I am a button, Hello world"
   ),
-  root
+  node,
 );
