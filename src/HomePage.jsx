@@ -1,39 +1,51 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Header from "./Header.jsx";
 import ItemList from "./ItemList.jsx";
-import {inkpens, pencils} from "./mydatabase.js";
-import ItemPage from "./ItemPage.jsx";
 
 class HomePage extends React.PureComponent{
 
     constructor(props){
         super(props);
         this.state = {
-        items: inkpens,
-        }
+            items: [],
+            selectedCategory: "inkpens",
+        };
     }
+
+    componentDidMount(){
+        this.fetchItems();
+    }
+
+    fetchItems = () =>{
+    fetch( "/api/items")
+        .then(res =>{
+            console.log("res", res);
+            return res.json();
+        })
+        .then( items =>{
+            console.log("items", items);
+            this.setState({
+                items
+            });
+        })
+        .catch(err =>{
+            console.log("err", err);
+        });
+    };
 
     handleChange (event){
         console.log(event.target.value);
-        switch (event.target.value) {
-        case "inkpens":{
-            this.setState( {
-            items: inkpens,
-            });
-            break;
-        }
-        case "pencils":{
-            this.setState( {
-            items: pencils,
-            });
-            break;
-        }
-        }
-        console.log("App state", this.state);
+        this.setState({
+            selectedCategory: event.target.value
+        });
+    }
+
+    getVisibleItems = () => {
+        return this.state.items.filter( item => item.category === this.state.selectedCategory);
     };
 
     render(){
+        console.log("this.state", this.state);
         return (
         <>
             <Header/>
@@ -41,9 +53,9 @@ class HomePage extends React.PureComponent{
             <option value="inkpens">Inkpens</option>
             <option value="pencils">Pencils</option>
             </select>
-            <ItemList items={this.state.items}/>
+            <ItemList items={this.getVisibleItems()}/>
         </>
-        )
+        );
     }
 }
 

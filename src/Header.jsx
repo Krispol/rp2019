@@ -7,7 +7,7 @@ const Header = () => {
       <div className="top-menu">
           <div className="top-menu-left">
           <Link to={"/"}>
-            <img src="https://www.tlu.ee/themes/tlu/logo.svg" alt="Tallinna Ülikool" />
+            <img className="header_logo" src="https://www.tlu.ee/themes/tlu/logo.svg" alt="Tallinna Ülikool" />
           </Link>    
           </div>
           <div className="top-menu-right">
@@ -17,7 +17,7 @@ const Header = () => {
       </div>
     </div>
     
-  )
+  );
 };
 
 export default Header;
