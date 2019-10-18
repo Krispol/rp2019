@@ -1,5 +1,3 @@
-console.log("item.js loaded");
-
 function setup(){
     const x = window.location;
     console.log(x);
