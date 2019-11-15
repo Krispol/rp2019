@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {userIcon} from "./icons";
+import {shoppingIcon} from "./icons";
+import "./header.css";
 
 const Header = () => {
   return ( 
@@ -11,7 +14,9 @@ const Header = () => {
           </Link>    
           </div>
           <div className="top-menu-right">
+              <img className="menuIcon" src={userIcon}/>
               <button className="button">Login/Signup</button>
+              <img className="menuIcon" src={shoppingIcon}/>
               <button className="button">Cart</button>
           </div>
       </div>

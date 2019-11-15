@@ -1,0 +1,39 @@
+.header {
+	margin-bottom: 25px;
+	box-shadow: 0px 1px #7c8586;
+	position: sticky;
+	top: 0;
+	background: white;
+}
+
+.top-menu {
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+}
+
+.top-menu-left {
+	padding: 25px 10px 25px 20px;
+}
+
+.top-menu-right {
+	width: 150px;
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 30px;
+}
+
+.button {
+	background-color: rgb(187, 14, 8);
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding: 4px 8px;
+	margin: 0px 1px;
+	border-radius: 2px;
+}
+
+.menuIcon{
+    height: 30px;
+}
