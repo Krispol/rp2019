@@ -17,10 +17,10 @@
 }
 
 .top-menu-right {
-	width: 150px;
 	display: flex;
 	justify-content: space-between;
-	padding: 50px 30px;
+    padding: 50px 30px;
+    float: right;
 }
 
 .button {
@@ -36,4 +36,5 @@
 
 .menuIcon{
     height: 30px;
+    margin: 0px 10px 0px;
 }

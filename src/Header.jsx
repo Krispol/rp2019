@@ -15,9 +15,9 @@ const Header = () => {
           </div>
           <div className="top-menu-right">
               <img className="menuIcon" src={userIcon}/>
-              <button className="button">Login/Signup</button>
+                <button className="button">Login/Signup</button>
               <img className="menuIcon" src={shoppingIcon}/>
-              <button className="button">Cart</button>
+                <button className="button">Cart</button>
           </div>
       </div>
     </div>
