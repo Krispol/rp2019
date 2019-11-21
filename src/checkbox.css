@@ -46,10 +46,6 @@
     transition: .4s;
 }
 
-input:checked + .slider {
-    background-color: #a2a79e;
-}
-
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
@@ -57,11 +53,11 @@ input:checked + .slider:before {
 }
 
 .slider.round {
-    border-radius: 34px;
+    border-radius: 3px;
 }
 
 .slider.round:before {
-    border-radius: 50%;
+    border-radius: 2px;
 }
 
 input:checked + .slider {

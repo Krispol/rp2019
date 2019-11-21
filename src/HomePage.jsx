@@ -98,11 +98,13 @@ class HomePage extends React.PureComponent{
                     handleDropdown={this.handleDropdown}
                     isSelected={this.isSelected}
                 />
-            <div className={"items-settings"}>
-                <SortDropdown 
-                        direction={this.state.sortDirection}
-                        onChange={this.handleSortDropdown}
-                />
+            <div className="items-settings-wrapper">
+                <div className={"items-settings"}>
+                    <SortDropdown 
+                            direction={this.state.sortDirection}
+                            onChange={this.handleSortDropdown}
+                    />
+                </div>
             </div>
             <ItemList items={this.getVisibleItems()}/>
         </>
