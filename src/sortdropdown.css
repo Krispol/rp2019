@@ -44,6 +44,11 @@ select {
     width: 9.5em;
 }
 
+option:hover {
+    cursor: pointer;
+    background: green;
+}
+
 /* Arrow */
 .select::after {
     content: '\25BC';
@@ -60,5 +65,5 @@ select {
 
 /* Transition */
 .select:hover::after {
-    color: #fff;
+color: #fff;
 }
