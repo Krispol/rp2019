@@ -22,59 +22,6 @@ a {
 	flex-wrap: wrap;
 	width: 1000px;
 	margin: 0 auto;
+	background: #fff;
 }
 
-.item {
-	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
-	border-radius: 3px;
-	padding: 5px;
-	margin-bottom: 25px;
-	width: 200px;
-	height: 400px;
-}
-
-.item:hover {
-	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
-	transition: .5s all;
-}
-
-.item img {
-	width: 200px;
-}
-
-.item_info {
-	padding: 5px 5px 5px 10px;
-}
-
-.item_title {
-	font-size: 20px;
-}
-
-.itemContainer {
-	box-shadow: 0px 2px 6px 0px rgb(230, 230, 230);
-	width: 90%;
-	padding: 40px 20px;
-}
-
-.itemContainer .item_image {
-	width: 200px;
-}
-
-.category-wrapper {
-	padding: 25px;
-}
-
-.item_price{
-	font-size: 18px;
-	font-weight: bold;
-	color:#b71234;
-	margin-top: 20px;
-}
-
-
-.item__price{
-	font-size: 16px;
-	font-weight: bold;
-	color:#b71234;
-	margin-top: 20px;
-}

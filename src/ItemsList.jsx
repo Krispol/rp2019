@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
+import "./itemsList.css";
 
-const ItemList = (props) => {
+const ItemsList = (props) => {
     return (
         <div className={"content"}>
             {
@@ -26,13 +27,14 @@ const Item = (props) => {
             <div className={"item"}>
                 <img src={props.imgSrc} />
                 <div className={"item__name"}>{props.title}</div>
-                <div className={"item__price"}>{props.price}</div>
+                <div className={"item__price"}>€{props.price}</div>
+                {/* <div className={"reviews"}>{`(${getRandomIntInclusive(0, 100)} reviews)`}</div> */}
             </div>
         </Link>
     );
 };
 
-ItemList.propTypes = {
+ItemsList.propTypes = {
     items: propTypes.array
 };
 
@@ -43,4 +45,4 @@ Item.propTypes = {
     price: propTypes.string,
 };
 
-export default ItemList;
+export default ItemsList;

@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header.jsx";
-import ItemList from "./ItemList.jsx";
+import ItemsList from "./ItemsList.jsx";
 import CheckBox from "./Checkbox.jsx";
 import PropTypes from "prop-types";
 import "./homepage.css";
@@ -99,7 +99,7 @@ class HomePage extends React.PureComponent{
                     isSelected={this.isSelected}
                 />
             <div className="items-settings-wrapper">
-                <div>
+                <div className="items-found">
                     Items found: {items.length} {this.state.selectedCategories.join(", ")}
                 </div>
                 <div className={"items-settings"}>
@@ -109,7 +109,7 @@ class HomePage extends React.PureComponent{
                     />
                 </div>
             </div>
-            <ItemList items={this.getVisibleItems()}/>
+            <ItemsList items={this.getVisibleItems()}/>
         </>
         );
     }
