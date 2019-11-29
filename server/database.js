@@ -6,7 +6,7 @@ const getItems = () => {
     inkpens.forEach((inkpen, index)=>{
         items.push({
             ...inkpen,
-            id: "inkpens-"+ index,
+            // id: "inkpens-"+ index,
             category: "inkpens",
             price: cleanPrice(inkpen.price)
         })
@@ -14,7 +14,7 @@ const getItems = () => {
     pencils.forEach((pencil, index)=>{
         items.push({
             ...pencil,
-            id: "pencils-"+ index,
+            // id: "pencils-"+ index,
             category: "pencils",
             price: cleanPrice(pencil.price)
         })

@@ -4,13 +4,14 @@ import propTypes from "prop-types";
 import "./itemsList.css";
 
 const ItemsList = (props) => {
+    console.log("Items list", props);
     return (
         <div className={"content"}>
             {
                 props.items.map(item => {
                     return <Item
-                        key = {item.id}
-                        id = {item.id}
+                        key = {item._id}
+                        id = {item._id}
                         imgSrc={item.imgSrc}
                         title={item.title}
                         price={item.price}
@@ -39,10 +40,10 @@ ItemsList.propTypes = {
 };
 
 Item.propTypes = {
-    id: propTypes.string,
-    imgSrc: propTypes.string,
-    title: propTypes.string,
-    price: propTypes.string,
+    id: propTypes.string.isRequired,
+    imgSrc: propTypes.string.isRequired,
+    title: propTypes.string.isRequired,
+    price: propTypes.number.isRequired,
 };
 
 export default ItemsList;

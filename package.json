@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaagala/RP2019.git"
+    "url": "git+https://github.com/Krispol/rp2019"
   },
-  "author": "Aland",
+  "author": "Põldmets",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jaagala/RP2019/issues"
+    "url": "https://github.com/Krispol/RP2019/issues"
   },
-  "homepage": "https://github.com/jaagala/RP2019#readme",
+  "homepage": "https://github.com/Krispol/RP2019#readme",
   "dependencies": {
     "babel-preset-react": "^6.24.1",
     "dotenv": "^8.2.0",
