@@ -9,8 +9,11 @@ const userRouter = require("./user.router.js");
 const DB = require("./database.js");
 const Item = require("./item.model.js");
 const bodyParser = require("body-parser");
-
 const DB_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS}@cluster0-w8n4s.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+
+if(process.env.NODE_ENV !== "production"){
+    require('dotenv').config();
+};
 
 app.use(bodyParser.json());
 app.use(itemRouter);
