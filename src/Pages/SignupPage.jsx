@@ -6,8 +6,9 @@ export class SignupPage extends React.PureComponent {
     constructor(props){
         super(props);
         this.state = {
-            username:"",
+            email:"",
             password:"",
+            confirmPassword:"",
         };
     }
     handleSubmit = (event) => {
@@ -24,10 +25,11 @@ export class SignupPage extends React.PureComponent {
     render(){
         return (
             <div className="form">
-                <form className="register-form">
-                    <input type="text" placeholder="name"/>
-                    <input type="password" placeholder="password"/>
-                    <input type="text" placeholder="email address"/>
+                <form className="register-form" onSubmit={this.handleSubmit}>
+                    <input type="text" placeholder="email address" name={"email"} onChange={this.handleChange}/>
+                    <input type="password" placeholder="password" name={"password"} onChange={this.handleChange}/>
+                    <input type="password" placeholder="password" name={"confirmPassword"} onChange={this.handleChange}/>
+                    
                     <button>create</button>
                     <p className="message">Already registered? <a href="#">Sign In</a></p>
                 </form>
