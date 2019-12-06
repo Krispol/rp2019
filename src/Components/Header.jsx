@@ -14,10 +14,14 @@ const Header = () => {
           </Link>    
           </div>
           <div className="top-menu-right">
+            <Link className={"header_button"} to={"./login"}>
               <img className="menuIcon" src={userIcon}/>
-                <button className="button">Login/Signup</button>
+              <button className="button">Login/Signup</button>
+            </Link>
+            <Link className={"header_button"} to={"./cart"}>
               <img className="menuIcon" src={shoppingIcon}/>
-                <button className="button">Cart</button>
+              <button className="button">Cart</button>
+            </Link>
           </div>
       </div>
     </div>
