@@ -9,8 +9,11 @@ const userRouter = require("./user.router.js");
 const DB = require("./database.js");
 const Item = require("./item.model.js");
 const bodyParser = require("body-parser");
-
 const DB_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS}@cluster0-w8n4s.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+
+if(process.env.NODE_ENV !== "production"){
+    require('dotenv').config();
+};
 
 app.use(bodyParser.json());
 app.use(itemRouter);
@@ -41,7 +44,7 @@ mongoose.connect(DB_URL)
     })
     .catch( err =>{
         console.log("Error happenze" , err)
-    });
+    })
 
 // Ei tea millal kõik tooted on salvestatud asünkroonse salvestuse tõttu
 function migrate(){
@@ -76,4 +79,9 @@ function saveAllItems(){
         })
     })
     console.log("items", items);
+}
+
+/** Development environment. In Heroku we don't use .env file */
+if(process.env.NODE_ENV !== "production"){
+  require('dotenv').config();
 }
